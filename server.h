@@ -20,7 +20,7 @@
 
 #include "miner.h"
 
-#define CONNMAX 1000
+#define CONNMAX 5
 #define BYTES 1024
 
 void server_thread();

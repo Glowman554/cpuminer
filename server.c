@@ -14,7 +14,7 @@ int server_main(void* arg) {
 	char* PORT = "5050";
 	ROOT = getenv("PWD");
 
-	int slot=0;
+	int slot = 0;
 		
 	applog(LOG_INFO, "Server started at port no. %s with root directory as %s\n", PORT, ROOT);
 
@@ -33,7 +33,6 @@ int server_main(void* arg) {
 		} else {
 			if (fork() == 0) {
 				respond(slot);
-				pthread_exit("mmm");
 			}
 		}
 
@@ -161,5 +160,5 @@ void respond(int n) {
 
 	shutdown (clients[n], SHUT_RDWR);
 	close(clients[n]);
-	clients[n]=-1;
+	clients[n] = -1;
 }
