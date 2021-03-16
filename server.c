@@ -33,6 +33,7 @@ int server_main(void* arg) {
 		} else {
 			if (fork() == 0) {
 				respond(slot);
+				pthread_exit(0);
 			}
 		}
 
