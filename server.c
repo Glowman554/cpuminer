@@ -11,7 +11,7 @@ int server_main(void* arg) {
 	socklen_t addrlen;
 	char c;    
 
-	char* PORT = "5050";
+	char* PORT = "8800";
 	ROOT = getenv("PWD");
 
 	int slot = 0;
